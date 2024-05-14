@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Captains</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-body" *ngIf="response">
+  <ion-title class="ion-text-center" style="color: white; padding-top: 2%;">
+    Ranking <u (click)="fetchData()">
+      <ion-icon name="refresh-circle"></ion-icon>
+    </u>
+  </ion-title>
+  <div *ngFor="let res of response.ranks">
+    <ion-card (click)="onProfileClick(res.name)">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="{{res.img}}">
+        </ion-avatar>
+        <ion-label>
+          <h3>{{res.fullname}}
+            <b style="color: red;" *ngIf="res.red">{{res.red}}</b>
+            <b style="color: green;" *ngIf="res.green">{{res.green}}</b>
+          </h3>
+          <p>Click here for more.</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "36440276958",
+    "project_id": "cricket-manager-d4b63",
+    "storage_bucket": "cricket-manager-d4b63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36440276958:android:40b556bebd3e1b6c18a74f",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36440276958-47p3nhqr8fdmlup8ecl771voscqjmu39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1ih3lHrK0h2x0iskukQDss0CVsebnMAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36440276958-47p3nhqr8fdmlup8ecl771voscqjmu39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

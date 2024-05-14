@@ -1,0 +1,8 @@
+{
+  "name": "cricketmanager",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

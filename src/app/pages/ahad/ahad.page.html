@@ -1,0 +1,46 @@
+<ion-header translucent no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="light">
+        <ion-icon slot="start" name="ios-arrow-back"></ion-icon>
+        Ahad
+      </ion-button>
+    </ion-buttons>
+    <ion-title>&nbsp;</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" src="../../assets/checkmark-filled.svg"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" slot="fixed" *ngIf="response">
+  <div class="card">
+    <div class="header">
+      <div class="avatar">
+        <img src="https://i.ibb.co/PF3XdTZ/image.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="user-meta ion-text-center">
+      <h3 class="playername">Ahad Parmar</h3>
+      <h5 class="country">Mumbai Indians</h5>
+      <h6 class="ranking">Current ranking: <ion-chip>
+          <ion-label>{{response.rank}}</ion-label>
+        </ion-chip>
+      </h6>
+    </div>
+    <div *ngFor="let res of response.titles">
+      <ion-button expand="full" color="primary">{{res}}</ion-button>
+    </div>
+    <div class="ion-text-center">
+      <h6 class="ranking">Head to Head</h6>
+    </div>
+    <div *ngFor="let res of response.headToHead">
+      <ion-button expand="full" color="primary">{{res}}</ion-button>
+    </div>
+  </div>
+
+</ion-content>

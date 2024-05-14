@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="content-body">
+  <div *ngIf="response">
+    <div *ngFor="let res of response.matches">
+      <ion-card>
+        <ion-item>
+          <ion-icon name="pin" slot="start"></ion-icon>
+          <ion-label>{{res.name}}</ion-label>
+          <ion-button fill="outline" slot="end" href="{{ res.link }}">Link</ion-button>
+        </ion-item>
+
+        <ion-card-content class="ion-text-center">
+          <p>{{res.message1}}</p>
+          <p>{{res.message2}}</p>
+          <!-- <p> A trophy carries dust. Memories last forever</p> -->
+          <!-- <p> - Mary Lou Retton</p> -->
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <ion-title class="ion-text-center" style="color: white; padding-top: 2%;">
+    Points Table <u (click)="fetchData()">
+      <ion-icon name="refresh-circle"></ion-icon>
+    </u>
+  </ion-title>
+  <div *ngIf="response">
+    <div *ngFor="let res of response.pointsTable">
+      <ion-card>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="{{res.img}}">
+          </ion-avatar>
+          <ion-label>
+            <h3>{{res.team}}
+              <b style="color: green;" *ngIf="res.green">{{res.green}}</b>
+              <b style="color: red;" *ngIf="res.red"> {{res.red}}</b>
+            </h3>
+            <p>{{res.points}}</p>
+            <b style="color: orange;" *ngIf="res.orange">Orange Cap</b>
+            <b style="color: purple;" *ngIf="res.purple"> Purple Cap</b>
+          </ion-label>
+        </ion-item>
+      </ion-card>
+    </div>
+  </div>
+  <div style="padding-bottom: 60px;"></div>
+</ion-content>
